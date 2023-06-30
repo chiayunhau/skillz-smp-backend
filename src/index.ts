@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.get('/api/users', (req: Request, res: Response) => {
     try{
         console.log("Someone connected to /api/users")
-        res.status(2000)
+        res.status(200).json({"status": "success."})
     }catch(error){
         console.log(error)
         res.status(500).json(error)
